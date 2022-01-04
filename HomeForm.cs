@@ -236,7 +236,7 @@ namespace PharmacyProject
                 List<KeyValuePair<int, int>> MedicineData = new List<KeyValuePair<int, int>>();
                 while (dr.Read())
                 {
-                    MedicineData.Add(new KeyValuePair<int, int>(dr.GetInt32(0), dr.GetInt32(1)));
+                    MedicineData.Add(new KeyValuePair<int, int>(dr.GetInt32(1), dr.GetInt32(0)));
                 }
                 dr.Close();
                 foreach (var medicineData in MedicineData)
